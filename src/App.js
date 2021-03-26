@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { Stage, Layer, Line } from 'react-konva';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{paddingLeft: '30px', paddingTop: '30px'}}>
+    <Stage width={100} height={100}>
+      <Layer>
+        <Line closed points={[0, 100, 100, 100, 0, 0]} fill="red" stroke="black" strokeWidth={1} />
+      </Layer>
+    </Stage>
     </div>
   );
 }
